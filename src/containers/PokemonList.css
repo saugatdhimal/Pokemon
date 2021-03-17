@@ -1,0 +1,28 @@
+.pokemonList__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 20vw;
+    border: 1px solid gray;
+}
+
+.pokemonList__item a {
+    text-decoration: none;
+}
+
+.pokemonList__search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pagination{
+    display: flex;
+    width: 500px;
+    margin: auto;
+    list-style: none;
+    justify-content: space-between;
+    padding: 10px;
+}
