@@ -21,37 +21,41 @@ function Pokemon(props) {
             console.log(pokeImage)
             return (
                 <div className="pokemon">
-                    
                 <div className="pokemon__images">
-                <h2>{pokemonName}</h2>
-                    <img src={pokeData.sprites.front_default} />
-                    <img src={pokeData.sprites.back_default} />
-                    <img src={pokeData.sprites.front_shiny} />
-                    <img src={pokeData.sprites.back_shiny} />
-                </div>
+                    <h2>{pokemonName.toUpperCase()}</h2>
+                    <h3>{`Height: ${pokeData.height}`}</h3>
+                    <h3>{`Weight: ${pokeData.weight}`}</h3>
+                    <img src={pokeData.sprites.front_default} alt=''/>
+                    <img src={pokeData.sprites.back_default} alt=''/>
+                    <img src={pokeData.sprites.front_shiny} alt=''/>
+                    <img src={pokeData.sprites.back_shiny} alt=''/>
+                </div >
+                <div className="pokemon__description">
                 <div className="pokemon__li">
-                <h2>Abilities</h2>
-                    <ul>
+                <h3>Abilities</h3>
                     {pokeData.abilities.map(x => {
-                        return <li>{x.ability.name}</li>
+                        return <p>{x.ability.name}</p>
                     })}
-                    </ul>
                 </div>
                 <div className="pokemon__li">
-                <h2>forms</h2>
-                    <ul>
-                    {pokeData.forms.map(x => {
-                        return <li>{x.name}</li>
+                <h3>Types</h3>
+                    {pokeData.types.map(x => {
+                        return <p>{x.type.name}</p>
                     })}
-                    </ul>
                 </div>
                 <div className="pokemon__li">
-                <h2>Stat</h2>
-                    <ul>
+                <h3>Stats</h3>
                     {pokeData.stats.map(x => {
-                        return <li>{x.stat.name}</li>
+                        return <p>{x.stat.name}</p>
                     })}
-                    </ul>
+                </div>
+                <div className="pokemon__li">
+                <h3>Moves</h3>
+                    {pokeData.moves.map(x => {
+                        return <p>{x.move.name}</p>
+                    })}
+                </div>
+                
                 </div>
                 </div>       
             )

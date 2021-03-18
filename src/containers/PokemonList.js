@@ -25,7 +25,7 @@ function PokemonList(props) {
             return (
                 pokemonList.data.results.map(x => {
                    return <div className="pokemonList__item">
-                         <p>{x.name}</p>
+                         <p>{x.name.toUpperCase()}</p>
                          <Link to={`/pokemon/${x.name}`}>view</Link>
                           </div>
                 })
@@ -38,9 +38,9 @@ function PokemonList(props) {
         return <p>nothing to show</p>
     }
     return (
-        <div>
+        <div className="pokemonList">
             <div className="pokemonList__search">
-                <input type="text" onChange={e => setSearch(e.target.value)} />
+                <input type="text" onChange={e => setSearch(e.target.value.toLowerCase())} />
                 <button onClick={() => props.history.push(`/pokemon/${search}`)}>Search</button>
             </div>
             {showData()}

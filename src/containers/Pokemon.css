@@ -2,4 +2,40 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    background-color: lightgray;
+    border: 1px solid yellow;
+    font-family: cursive;
 }
+
+.pokemon__images{
+    text-align: center;
+    color: navy;
+}
+
+.pokemon__images h3{
+    color: red;
+}
+
+.pokemon__li{
+    margin-top: 20px;
+    color: navy;
+}
+
+.pokemon__li h3{
+    color: red;
+}
+
+@media screen and (min-width: 400px) {
+    .pokemon{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pokemon__description{
+        display: flex;
+    }
+
+    .pokemon__li{
+        margin: 10px;
+    }
+  }
